@@ -7,12 +7,12 @@
   <script>
       function reloadIFrame() {
       var iframe = document.getElementById("iFrame");
-        console.log(iframe.contentDocument.URL); //work control
+        // console.log(iframe.contentDocument.URL); //work control
         if(iframe.contentDocument.URL == "about:blank"){
           iframe.src =  iframe.src;
         }
       }
-      var timerId = setInterval("reloadIFrame();", 500);
+      var timerId = setInterval("reloadIFrame();", 100);
 
       $( document ).ready(function() {
           $('#menuiFrame').on('load', function() {
